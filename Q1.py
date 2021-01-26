@@ -54,3 +54,19 @@ def missing_number(nums, max_num):
             return nums[i] + 1
                
 print(missing_number([2, 1, 4, 3, 6, 5, 7, 10, 9], 10))
+
+#=========================
+#Solution:
+
+
+   # 1st solution: Initial solution: keep track of what you've
+    #               seen in a separate list
+
+    seen = [False] * max_num
+
+    for n in nums:
+        seen[n - 1] = True
+        
+# The False value is the one we haven't seen
+
+    return seen.index(False) + 1
