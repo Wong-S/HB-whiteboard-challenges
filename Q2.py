@@ -31,7 +31,7 @@
 #Code 
 
 Def fizzbuzz():
-	For num in range(1, 21):
+	for num in range(1, 21):
 
 		if num % 3 == 0 and num % 5 == 0 :
 			print(“fizzbuzz”)
@@ -39,8 +39,10 @@ Def fizzbuzz():
 		elif num % 3 == 0:
 			print(“fizz”)
 
-		Elif num % 5 == 0:
+		elif num % 5 == 0:
 			print(“buzz”)
 
-		Else:
+		else:
 			print(num)
+
+#Note: Need to put more granular conditional to account for numbers like 15, etc. 
