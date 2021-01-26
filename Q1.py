@@ -36,3 +36,21 @@ Def missing_num(num_lst , max_num):
 	For num in num_lst:
 		If num not in comparison_lst:
 			Return num 
+
+#=================================
+#Alt Method:
+
+def missing_number(nums, max_num):
+    sorted_nums = sorted(nums)
+    #[1,2,3,4,5,6,7,9,10]
+    
+    count=0
+    
+    for i, num in enumerate(sorted_nums):
+       
+        if sorted_nums[count+1] - sorted_nums[i] == 1:
+            count += 1
+        else:
+            return nums[i] + 1
+               
+print(missing_number([2, 1, 4, 3, 6, 5, 7, 10, 9], 10))
